@@ -43,7 +43,7 @@ const Signup = () => {
 
         <Button bgColor = "#E4E7EB" text="Continue with Google" textColor = "#4B5768"/>
         
-        <div className='w-full flex justify-center mt-4 text-[#685CFF] flex'>
+        <div className='w-full justify-center mt-4 text-[#685CFF] flex'>
             <p className='text-[grey]'>Already have an account?</p>
             <a href="">Create an account</a>
         </div>

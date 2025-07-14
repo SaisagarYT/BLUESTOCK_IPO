@@ -12,8 +12,8 @@ const UpcomingIpo = () => {
     setIndex(index == i ? null : i)
   }
   return (
-    <div className='pl-10 pr-10 bg-[#f9f7f7] max-sm:p-5'>
-      <div className='flex flex-col mb-5'>
+    <div className='pl-10 pr-10 bg-[var(--bg-screen)] max-sm:p-5'>
+      <div className='flex flex-col py-5'>
         <p className='text-[12px]'>UPCOMING IPO</p>
         <h1 className='text-2xl font-bold mt-2'>Upcoming IPO</h1>
         <p className='text-[14px]'>Companies that have filled for an IPO with SEBL Few detail might be disclosed by the companies later.</p>

@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+:root{
+    --bg-gray:#9A9A9A;
+    --bg-violet:#3F52FF;
+    --bg-orange:#F05537;
+    --bg-black:#000000;
+    --bg-screen:#F6F5F5;
+    --text-violet:#414BEA;
+}
+
+html,body{
+    overflow-x: hidden;
+}
