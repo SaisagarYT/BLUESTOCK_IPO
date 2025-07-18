@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root{
+    /* background colors */
     --bg-gray:#9A9A9A;
     --bg-violet:#3F52FF;
     --bg-orange:#F05537;
@@ -8,6 +9,11 @@
     --bg-screen:#F6F5F5;
     --text-violet:#414BEA;
     --bg-admin-bar:#F1F2F7;
+    --bg-violet-light:#707fdd17;
+
+    /* text colors */
+    --bg-violet-text:#5A6ACF;
+    --bg-lightgray-text:#27324064;
 }
 
 html,body{

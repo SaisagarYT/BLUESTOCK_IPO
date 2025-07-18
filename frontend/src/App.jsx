@@ -1,4 +1,5 @@
 import React from 'react'
+import 'remixicon/fonts/remixicon.css'
 import {Routes,Route} from 'react-router-dom';
 import Navbar from './components/Navbar'
 import UpcomingIpo from './components/IpoScreen'
