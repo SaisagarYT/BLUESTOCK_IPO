@@ -7,12 +7,14 @@
     --bg-orange:#F05537;
     --bg-black:#000000;
     --bg-screen:#F6F5F5;
+    --bg-white-medium:#F6F6FB;
     --text-violet:#414BEA;
     --bg-admin-bar:#F1F2F7;
     --bg-violet-light:#707fdd17;
-
+    --bg-white-medium1:#DDE4F0;
+    --bg-white-medium2:#F7F6FE;
     /* text colors */
-    --bg-violet-text:#5A6ACF;
+    --bg-violet-text:#5A67BA;
     --bg-lightgray-text:#27324064;
 }
 

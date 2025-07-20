@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Dashboard from './adminDashboard/Dashboard';
+import Upcoming from './adminDashboard/Upcoming';
 
 const AdminDashboard = () => {
   const [isSelect1, setSelect1] = useState();
@@ -40,6 +42,8 @@ const AdminDashboard = () => {
   ]
 
   const tabs1 = sidebar.filter((item,index) => index < 4);
+  const selected1 = sidebar.filter((item,index) => index == isSelect1);
+  console.log(selected1);
   const tabs2 = sidebar.filter((item,index) => index > 3);
   return (
     <div className='w-screen h-screen flex'>
@@ -47,7 +51,7 @@ const AdminDashboard = () => {
         <div className='w-60 h-full bg-[var(--bg-violet-light)] flex items-center justify-center'>
           <h1 className='text-[var(--text-violet)] font-bold flex items-center justify-center gap-2'><p className='p-1 rounded-full bg-[var(--text-violet)] text-white px-2'>BF</p><p>Bluestock Fintech</p></h1>
         </div>
-        <div className='border-1 flex w-[40%] justify-between items-center focus:ring-2 focus:ring-violet-300 focus:border-2 pr-3'>
+        <div className='flex w-[40%] justify-between  bg-[var(--bg-white-medium)] items-center focus:ring-2 focus:ring-violet-300 focus:border-2 pr-3'>
           <input type="text" placeholder='Search' className='w-full indent-2 outline-0 h-10' />
           <i class="ri-search-line"></i>
         </div>
@@ -78,8 +82,17 @@ const AdminDashboard = () => {
             </ul>
           </div>
         </div>
-        <div className='max-w-full h-screen'>
-          
+        <div className='w-full p-10 h-screen mt-17 bg-amber-00'>
+          {
+            selected1.map((item,index) => 
+            item.title === "Dashboard"?<Dashboard/> : ''
+            )
+          }
+          {
+            selected1.map((item,index) => 
+            item.title === "Manage IPO"?<Upcoming/> : ''
+            )
+          }
         </div>
     </div>
   )
