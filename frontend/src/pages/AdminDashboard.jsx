@@ -46,7 +46,7 @@ const AdminDashboard = () => {
   console.log(selected1);
   const tabs2 = sidebar.filter((item,index) => index > 3);
   return (
-    <div className='w-screen h-screen flex'>
+    <div className='w-screen h-screen flex overflow-hidden'>
       <nav className='w-full h-17 absolute justify-between top-0 border-b-1 flex items-center border-gray-300'>
         <div className='w-60 h-full bg-[var(--bg-violet-light)] flex items-center justify-center'>
           <h1 className='text-[var(--text-violet)] font-bold flex items-center justify-center gap-2'><p className='p-1 rounded-full bg-[var(--text-violet)] text-white px-2'>BF</p><p>Bluestock Fintech</p></h1>
@@ -66,7 +66,7 @@ const AdminDashboard = () => {
           </div>
         </div>
       </nav>
-        <div className='w-60 mt-17 h-full bg-[var(--bg-admin-bar)]'>
+        <div className='w-[287px] mt-17 h-full bg-[var(--bg-admin-bar)]'>
           <div className='w-full py-6 px-5'>
             <h1 className='text-[11px] text-[#08243173] pl-6'>MENU</h1>
             <ul className='w-full flex flex-col gap-2 mt-2'>
@@ -82,7 +82,7 @@ const AdminDashboard = () => {
             </ul>
           </div>
         </div>
-        <div className='w-full p-10 h-screen mt-17 bg-amber-00'>
+        <div className='p-10 w-full h-screen mt-17 bg-amber-00'>
           {
             selected1.map((item,index) => 
             item.title === "Dashboard"?<Dashboard/> : ''
