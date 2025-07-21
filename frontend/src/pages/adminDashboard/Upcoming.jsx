@@ -44,7 +44,6 @@ const Upcoming = () => {
               <td>{(item.listingDate).slice(0,10)}</td>
               <td className=''><p className={`border  py-1 rounded-2xl ${item.status == "Ongoing"? 'border-green-500 bg-green-200 text-green-600' : ''} ${item.status == 'Upcoming'?'bg-orange-100 text-orange-500 border border-orange-300' : ''}`}>{item.status}</p></td>
             </tr>
-            
           })
           }
         </tbody>
