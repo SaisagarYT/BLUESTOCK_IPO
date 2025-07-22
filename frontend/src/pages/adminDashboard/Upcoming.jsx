@@ -36,13 +36,15 @@ const Upcoming = () => {
           {
           data.map((item,index) =>{
             return <tr key={index} className={`hover:bg-gray-50 text-sm ${index % 2 == 0? 'bg-[var(--bg-white-medium2)]' : 'white'}`}>
-              <td className='py-3 px-3'>{item.company}</td>
+              <td className=''>{item.company}</td>
               <td>{item.priceBand.max} - {item.priceBand.min}</td>
               <td>{(item.openDate).slice(0,10)}</td>
               <td>{(item.closeDate).slice(0,10)}</td>
               <td>{(item.issueSize)}</td>
               <td>{(item.listingDate).slice(0,10)}</td>
               <td className=''><p className={`border  py-1 rounded-2xl ${item.status == "Ongoing"? 'border-green-500 bg-green-200 text-green-600' : ''} ${item.status == 'Upcoming'?'bg-orange-100 text-orange-500 border border-orange-300' : ''}`}>{item.status}</p></td>
+              <td className='px-4'><p className='py-2 px-2 bg-violet-700 rounded-sm text-white font-bold'>Update</p></td>
+              <td className='text-xl flex justify-center gap-2 py-4'><i className="ri-delete-bin-line text-red-500"></i><i className="ri-eye-line"></i></td>
             </tr>
           })
           }
