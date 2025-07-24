@@ -15,5 +15,5 @@ app.use('/api/companies',ipoRoute);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,() =>{
-    console.log("http://localhost5000")
+    console.log("http://localhost:5000");
 })

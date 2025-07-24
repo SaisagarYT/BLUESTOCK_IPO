@@ -46,11 +46,9 @@ const AdminDashboard = () => {
   console.log(selected1);
   const tabs2 = sidebar.filter((item,index) => index > 3);
   return (
-    <div className='w-screen h-screen flex overflow-hidden'>
+    <div className='w-screen h-screen flex'>
       <nav className='w-full h-17 absolute justify-between top-0 border-b-1 flex items-center border-gray-300'>
-        <div className='w-60 h-full bg-[var(--bg-violet-light)] flex items-center justify-center'>
-          <h1 className='text-[var(--text-violet)] font-bold flex items-center justify-center gap-2'><p className='p-1 rounded-full bg-[var(--text-violet)] text-white px-2'>BF</p><p>Bluestock Fintech</p></h1>
-        </div>
+        <div></div>
         <div className='flex w-[40%] justify-between  bg-[var(--bg-white-medium)] items-center focus:ring-2 focus:ring-violet-300 focus:border-2 pr-3'>
           <input type="text" placeholder='Search' className='w-full indent-2 outline-0 h-10' />
           <i class="ri-search-line"></i>
@@ -66,9 +64,10 @@ const AdminDashboard = () => {
           </div>
         </div>
       </nav>
-        <div className='w-[287px] mt-17 h-full bg-[var(--bg-admin-bar)]'>
+        <div className='w-[287px] h-full bg-[var(--bg-admin-bar)]'>
+          <h1 className='w-full flex items-center font-bold text-[var(--text-violet)] justify-center py-5 gap-2'><span className='p-2 text-white px-3 rounded-full bg-[var(--text-violet)]'>BF</span>Bluestock Fintech</h1>
           <div className='w-full py-6 px-5'>
-            <h1 className='text-[11px] text-[#08243173] pl-6'>MENU</h1>
+            <h1 className='text-[11px] text-[#08243173] pl-6 mt-4'>MENU</h1>
             <ul className='w-full flex flex-col gap-2 mt-2'>
               {
                 tabs1.map((item,index) => <li onClick={() =>{setSelect1(index); setSelect2(null)}} className={`flex transition-all cursor-pointer rounded-sm gap-3 py-3 px-5 items-center font-medium ${isSelect1 == index?'bg-[var(--bg-violet-light)] text-[var(--bg-violet-text)]':''} text-[var(--bg-lightgray-text)] `} key={index}><span>{item.icon}</span><p className='text-[12px]'>{item.title}</p></li>)
@@ -82,7 +81,7 @@ const AdminDashboard = () => {
             </ul>
           </div>
         </div>
-        <div className='p-10 w-full h-screen mt-17 bg-amber-00'>
+        <div className='p-10 w-full h-screen mt-10 bg-amber-00'>
           {
             selected1.map((item,index) => 
             item.title === "Dashboard"?<Dashboard/> : ''
