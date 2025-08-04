@@ -23,7 +23,6 @@ const App = () => {
         <Route path='/admin/*' element={<AdminDashboard/>}/>
         <Route path='/admin/dashboard' element={<Dashboard/>}/>
         <Route path='/admin/upcoming' element={<Upcoming/>}/>
-        <Route path='/iporegister' element={<RegisterIPO/>}/>
       </Routes>
     </div>
   )

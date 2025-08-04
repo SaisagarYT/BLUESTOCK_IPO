@@ -8,8 +8,8 @@ const Accordian = (props) => {
     >
       <section className="w-full flex justify-between px-6 pt-8">
         <h1 className="text-[30px] font-medium max-sm:text-[20px]">{props.name}</h1>
-        <p className="text-[30px] font-bold text-blue-500 transition-transform duration-300">
-          {props.isOpen ? '-' : '+'}
+        <p className="text-[30px] transition-all font-bold text-blue-500 transition-transform duration-300">
+          {props.isOpen ? <i class="fa-solid fa-minus"></i> : <i class="fa-solid fa-plus"></i>}
         </p>
       </section>
 

@@ -24,7 +24,7 @@ const UpcomingIpo = () => {
   return (
     <div className='pl-10 pr-10 bg-[var(--bg-screen)] max-sm:p-5'>
       <div className='flex flex-col py-5'>
-        <p className=' font-medium flex text-md'><p className='text-[#0000FF]'>Bluestock </p> > <p className='text-[#0000FF]'>IPO</p> >UPCOMING IPO</p>
+        <p className=' font-medium flex items-center flex text-md'><p className='text-[#0000FF]'>Bluestock </p> <i class="fa-solid fa-angle-right"></i> <p className='text-[#0000FF]'>IPO</p> <i class="fa-solid fa-angle-right"></i> UPCOMING IPO</p>
         <h1 className='text-2xl font-bold mt-2'>Upcoming IPO</h1>
         <p className='text-[14px]'>Companies that have filled for an IPO with SEBL Few detail might be disclosed by the companies later.</p>
       </div>

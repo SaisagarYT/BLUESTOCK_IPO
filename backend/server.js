@@ -3,6 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 const ipoRoute = require('./routes/ipo.route');
+const adminRoute = require('./routes/admin.route');
 const connectDB = require('./config/db');
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(cors());
 connectDB();
 
 app.use('/api/companies',ipoRoute);
+app.use('/api/admin',adminRoute);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT,() =>{
