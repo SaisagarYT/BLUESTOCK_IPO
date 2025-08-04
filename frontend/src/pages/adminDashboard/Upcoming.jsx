@@ -2,21 +2,26 @@ import React from 'react'
 import { ipoApi } from '../../features/iop/ipoAPI'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import RegisterIPO from '../RegisterIPO'
 
 const Upcoming = () => {
   const [data, setData] = useState([]);
   const [count, setCount] = useState();
+  let least = 0, highest = 9;
   useEffect(() =>{
     ipoApi()
     .then(res => setData(res))
     .catch((err) => console.log(err.message))
-  },[data])
-  
+  },[])
+  const IPOFilter = data.filter((item,index) => index <= highest && index >= least);
   return (
-    <div className='w-full h-full'>
-      <div className=' flex justify-between p-4'>
+    <div className='w-full h-full overflow-scroll'>
+      <div className=' flex justify-between p-4 items-center'>
         <p className='text-lg font-medium'>Upcomming IPO | Dashboard</p>
-        <button className='bg-[var(--bg-white-medium1)] py-1 px-4 text-[12px] shadow-sm border-0.5 rounded-sm text-[var(--bg-violet-text)]'>Register IPO</button>
+        <Link to='/iporegister'>
+          <button className='bg-gray-50 border-1 border-violet-200 px-10 py-2 text-md shadow-sm border-0.5 rounded-sm text-[var(--bg-violet-text)] cursor-pointer'>Register IPO</button>
+        </Link>
       </div>
       <div className=''>
        <table className="w-full text-sm table-auto text-center">
@@ -35,7 +40,7 @@ const Upcoming = () => {
         </thead>
         <tbody>
           {
-          data.map((item,index) =>{
+          IPOFilter.map((item,index) =>{
             return <tr key={index} className={`hover:bg-gray-50 text-sm ${index % 2 == 0? 'bg-[var(--bg-white-medium2)]' : 'white'}`}>
               <td className=''>{item.company}</td>
               <td>{item.priceBand.max} - {item.priceBand.min}</td>
@@ -53,11 +58,11 @@ const Upcoming = () => {
       </table>
         
       {/* nextpages */}
-      <div className='w-full flex'>
+      <div className='w-full flex mt-5'>
           <ul className='w-full flex gap-2'>
-            <li className='size-8 rounded-sm bg-gray-600 text-2xl justify-center items-center flex text-white font-bold'> - </li>
+            <li onClick={() => least+=10} className='cursor-pointer size-8 rounded-sm bg-gray-600 text-2xl justify-center items-center flex text-white font-bold'> <i class="ri-arrow-drop-left-line"></i> </li>
             <li className='size-8 rounded-sm text-black justify-center items-center flex font-medium border border-purple-500'> 1 </li>
-            <li className='size-8 rounded-sm bg-gray-600 text-2xl justify-center items-center flex text-white font-bold'> - </li>
+            <li className='size-8 cursor-pointer rounded-sm bg-gray-600 text-2xl justify-center items-center flex text-white font-bold'> <i class="ri-arrow-drop-right-line"></i> </li>
           </ul>
       </div>
       </div>

@@ -46,7 +46,7 @@ const AdminDashboard = () => {
   console.log(selected1);
   const tabs2 = sidebar.filter((item,index) => index > 3);
   return (
-    <div className='w-screen h-screen flex'>
+    <div className='w-screen h-screen flex overflow-hidden'>
       <nav className='w-full h-17 absolute justify-between top-0 border-b-1 flex items-center border-gray-300'>
         <div></div>
         <div className='flex w-[40%] justify-between  bg-[var(--bg-white-medium)] items-center focus:ring-2 focus:ring-violet-300 focus:border-2 pr-3'>
